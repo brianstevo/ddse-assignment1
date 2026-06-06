@@ -1,0 +1,17 @@
+Command (example for k=10):
+  java -Xmx4096m -jar arcade_core_clusterer.jar \
+    algo=WCA language=java \
+    deps=/tmp/tika_arcade/tika_filtered.rsf \
+    measure=UEMNM projname=tika projversion=36211dda7 \
+    projpath=/tmp/tika_arcade/wca_uemnm_10 \
+    stop=preselected stopthreshold=10 \
+    serial=archsize serialthreshold=10 \
+    packageprefix="org.apache.tika"
+
+ ACDC Clustering
+Command:
+  java -jar arcade_core-ACDC.jar \
+    /tmp/tika_arcade/tika_filtered.rsf \
+    /tmp/tika_arcade/acdc/tika_acdc.rsf
+
+Output: acdc/ACDC_default.rsf

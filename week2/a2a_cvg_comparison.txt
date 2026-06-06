@@ -1,0 +1,50 @@
+A                      B                          A2A    CVG
+------------------------------------------------------------
+WCA UEMNM 5            Limbo IL 5               92.48   0.20
+WCA UEMNM 5            ACDC default             91.52   0.20
+WCA UEMNM 10           Limbo IL 5               90.98   0.10
+WCA UEMNM 10           ACDC default             90.19   0.10
+Limbo IL 5             ACDC default             88.07   0.00
+WCA UEMNM 20           Limbo IL 5               88.06   0.05
+WCA UEMNM 20           ACDC default             88.04   0.05
+WCA UEMNM 30           ACDC default             85.65   0.03
+WCA UEMNM 30           Limbo IL 5               85.22   0.00
+WCA UEMNM 50           Limbo IL 50              83.93   0.04
+WCA UEMNM 40           ACDC default             83.63   0.03
+WCA UEMNM 40           Limbo IL 40              82.77   0.05
+WCA UEMNM 50           Limbo IL 30              82.77   0.04
+WCA UEMNM 50           Limbo IL 40              82.73   0.04
+WCA UEMNM 10           Limbo IL 10              82.56   0.00
+WCA UEMNM 40           Limbo IL 5               82.47   0.00
+WCA UEMNM 30           Limbo IL 30              82.12   0.03
+Limbo IL 10            ACDC default             81.93   0.00
+WCA UEMNM 5            Limbo IL 10              81.65   0.00
+WCA UEMNM 40           Limbo IL 50              81.62   0.05
+WCA UEMNM 20           Limbo IL 20              81.59   0.00
+WCA UEMNM 50           Limbo IL 20              81.38   0.00
+WCA UEMNM 20           Limbo IL 10              81.16   0.00
+WCA UEMNM 40           Limbo IL 30              81.09   0.05
+WCA UEMNM 30           Limbo IL 40              80.95   0.03
+WCA UEMNM 50           Limbo IL 10              80.67   0.02
+WCA UEMNM 20           Limbo IL 30              80.38   0.05
+WCA UEMNM 30           Limbo IL 20              80.38   0.00
+Limbo IL 20            ACDC default             80.06   0.00
+WCA UEMNM 30           Limbo IL 10              79.94   0.00
+WCA UEMNM 30           Limbo IL 50              79.80   0.03
+WCA UEMNM 10           Limbo IL 20              79.64   0.00
+WCA UEMNM 20           Limbo IL 40              79.22   0.05
+WCA UEMNM 40           Limbo IL 20              79.22   0.00
+WCA UEMNM 5            Limbo IL 20              78.87   0.00
+Limbo IL 30            ACDC default             78.70   0.00
+WCA UEMNM 40           Limbo IL 10              78.61   0.00
+WCA UEMNM 10           Limbo IL 30              78.44   0.00
+WCA UEMNM 20           Limbo IL 50              78.08   0.05
+WCA UEMNM 5            Limbo IL 30              77.68   0.00
+WCA UEMNM 10           Limbo IL 40              77.29   0.00
+Limbo IL 40            ACDC default             77.23   0.00
+WCA UEMNM 50           Limbo IL 5               76.72   0.00
+WCA UEMNM 5            Limbo IL 40              76.52   0.00
+WCA UEMNM 10           Limbo IL 50              76.16   0.00
+Limbo IL 50            ACDC default             76.10   0.00
+WCA UEMNM 5            Limbo IL 50              75.40   0.00
+WCA UEMNM 50           ACDC default             74.63   0.00

@@ -1,0 +1,544 @@
+cpu-bind=MASK - n2gpu1211, task  0  0 [2036012]: mask 0x|--------|--------||BBBB----|--------||--------|--------||--------|--------||||--------|--------||BBBB----|--------||--------|--------||--------|--------| set
+
+[notice] A new release of pip is available: 24.2 -> 26.1.1
+[notice] To update, run: pip install --upgrade pip
+Job started: Sa 6. Jun 19:26:32 CEST 2026
+Node: n2gpu1211
+Sat Jun  6 19:26:32 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 590.48.01              Driver Version: 590.48.01      CUDA Version: 13.1     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-40GB          On  |   00000000:44:00.0 Off |                    0 |
+| N/A   41C    P0             57W /  400W |       0MiB /  40960MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   1  NVIDIA A100-SXM4-40GB          On  |   00000000:84:00.0 Off |                    0 |
+| N/A   40C    P0             60W /  400W |       0MiB /  40960MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Loading model: Qwen/Qwen2.5-72B-Instruct
+Fetching 37 files:   0%|          | 0/37 [00:00<?, ?it/s]Error while downloading from https://huggingface.co/Qwen/Qwen2.5-72B-Instruct/resolve/495f39366efef23836d0cfae4fbe635880d2be31/model-00007-of-00037.safetensors: The read operation timed out
+Trying to resume download...
+Fetching 37 files:   3%|▎         | 1/37 [03:09<1:53:37, 189.39s/it]Fetching 37 files:   8%|▊         | 3/37 [03:58<38:02, 67.14s/it]   Fetching 37 files:  14%|█▎        | 5/37 [06:07<35:10, 65.95s/it]Fetching 37 files:  19%|█▉        | 7/37 [08:35<34:42, 69.41s/it]Fetching 37 files:  27%|██▋       | 10/37 [08:55<17:44, 39.43s/it]Fetching 37 files:  30%|██▉       | 11/37 [09:36<17:16, 39.86s/it]Fetching 37 files:  32%|███▏      | 12/37 [11:58<25:29, 61.16s/it]Fetching 37 files:  35%|███▌      | 13/37 [13:20<26:22, 65.92s/it]Fetching 37 files:  59%|█████▉    | 22/37 [14:42<05:51, 23.43s/it]Fetching 37 files:  62%|██████▏   | 23/37 [15:00<05:20, 22.89s/it]Fetching 37 files:  65%|██████▍   | 24/37 [18:56<11:01, 50.87s/it]Fetching 37 files:  73%|███████▎  | 27/37 [18:58<05:27, 32.78s/it]Fetching 37 files:  78%|███████▊  | 29/37 [19:52<04:11, 31.38s/it]Fetching 37 files:  86%|████████▋ | 32/37 [20:40<02:09, 25.90s/it]Fetching 37 files:  89%|████████▉ | 33/37 [21:18<01:50, 27.70s/it]Fetching 37 files:  95%|█████████▍| 35/37 [21:39<00:45, 22.62s/it]Fetching 37 files: 100%|██████████| 37/37 [21:39<00:00, 35.12s/it]
+Loading weights:   0%|          | 0/963 [00:00<?, ?it/s]Loading weights:   0%|          | 1/963 [00:01<26:29,  1.65s/it]Loading weights:   0%|          | 2/963 [00:03<24:45,  1.55s/it]/pc2/users/b/bsaranha/.local/lib/python3.10/site-packages/bitsandbytes/backends/cuda/ops.py:213: FutureWarning: _check_is_size will be removed in a future PyTorch release along with guard_size_oblivious.     Use _check(i >= 0) instead.
+  torch._check_is_size(blocksize)
+Loading weights:   0%|          | 4/963 [00:04<15:51,  1.01it/s]Loading weights:   1%|          | 5/963 [00:04<12:21,  1.29it/s]Loading weights:   1%|          | 6/963 [00:04<09:48,  1.63it/s]Loading weights:   2%|▏         | 16/963 [00:05<02:13,  7.11it/s]Loading weights:   2%|▏         | 18/963 [00:05<02:44,  5.76it/s]Loading weights:   2%|▏         | 24/963 [00:06<01:40,  9.35it/s]Loading weights:   3%|▎         | 26/963 [00:06<01:37,  9.57it/s]Loading weights:   3%|▎         | 28/963 [00:06<01:52,  8.31it/s]Loading weights:   3%|▎         | 30/963 [00:07<02:38,  5.90it/s]Loading weights:   4%|▎         | 34/963 [00:07<01:46,  8.71it/s]Loading weights:   4%|▍         | 40/963 [00:08<01:58,  7.78it/s]Loading weights:   4%|▍         | 42/963 [00:09<02:48,  5.47it/s]Loading weights:   5%|▍         | 46/963 [00:09<02:00,  7.62it/s]Loading weights:   5%|▌         | 50/963 [00:09<01:31,  9.99it/s]Loading weights:   6%|▌         | 53/963 [00:09<01:50,  8.26it/s]Loading weights:   6%|▌         | 55/963 [00:10<02:31,  6.00it/s]Loading weights:   6%|▌         | 60/963 [00:10<01:42,  8.83it/s]Loading weights:   7%|▋         | 64/963 [00:11<02:16,  6.61it/s]Loading weights:   7%|▋         | 66/963 [00:12<02:30,  5.98it/s]Loading weights:   7%|▋         | 72/963 [00:12<01:32,  9.59it/s]Loading weights:   8%|▊         | 76/963 [00:12<01:26, 10.27it/s]Loading weights:   8%|▊         | 78/963 [00:13<02:17,  6.42it/s]Loading weights:   9%|▊         | 82/963 [00:13<01:41,  8.66it/s]Loading weights:   9%|▉         | 86/963 [00:13<01:16, 11.50it/s]Loading weights:   9%|▉         | 89/963 [00:14<02:17,  6.37it/s]Loading weights:   9%|▉         | 91/963 [00:15<02:13,  6.55it/s]Loading weights:  10%|█         | 98/963 [00:15<01:12, 11.86it/s]Loading weights:  11%|█         | 102/963 [00:16<01:49,  7.87it/s]Loading weights:  11%|█         | 106/963 [00:16<01:23, 10.22it/s]Loading weights:  12%|█▏        | 112/963 [00:16<01:22, 10.35it/s]Loading weights:  12%|█▏        | 115/963 [00:17<01:32,  9.20it/s]Loading weights:  12%|█▏        | 120/963 [00:17<01:10, 11.96it/s]Loading weights:  13%|█▎        | 124/963 [00:18<01:41,  8.23it/s]Loading weights:  13%|█▎        | 126/963 [00:18<02:00,  6.97it/s]Loading weights:  13%|█▎        | 130/963 [00:19<01:29,  9.35it/s]Loading weights:  14%|█▍        | 136/963 [00:19<01:21, 10.19it/s]Loading weights:  14%|█▍        | 138/963 [00:20<01:43,  7.93it/s]Loading weights:  15%|█▍        | 144/963 [00:20<01:09, 11.75it/s]Loading weights:  15%|█▌        | 148/963 [00:20<01:23,  9.77it/s]Loading weights:  16%|█▌        | 150/963 [00:21<02:13,  6.07it/s]Loading weights:  16%|█▌        | 156/963 [00:21<01:23,  9.65it/s]Loading weights:  17%|█▋        | 160/963 [00:22<01:17, 10.30it/s]Loading weights:  17%|█▋        | 163/963 [00:22<01:30,  8.83it/s]Loading weights:  17%|█▋        | 168/963 [00:22<01:05, 12.08it/s]Loading weights:  18%|█▊        | 172/963 [00:24<01:53,  6.97it/s]Loading weights:  18%|█▊        | 174/963 [00:24<02:20,  5.62it/s]Loading weights:  19%|█▉        | 184/963 [00:25<01:18,  9.94it/s]Loading weights:  19%|█▉        | 186/963 [00:26<02:02,  6.33it/s]Loading weights:  20%|█▉        | 192/963 [00:26<01:24,  9.14it/s]Loading weights:  20%|██        | 196/963 [00:26<01:35,  8.03it/s]Loading weights:  21%|██        | 198/963 [00:27<02:11,  5.81it/s]Loading weights:  21%|██        | 204/963 [00:28<01:27,  8.70it/s]Loading weights:  22%|██▏       | 208/963 [00:28<01:15,  9.98it/s]Loading weights:  22%|██▏       | 210/963 [00:28<01:43,  7.29it/s]Loading weights:  22%|██▏       | 216/963 [00:29<01:34,  7.92it/s]Loading weights:  23%|██▎       | 220/963 [00:30<01:48,  6.87it/s]Loading weights:  23%|██▎       | 221/963 [00:30<01:52,  6.60it/s]Loading weights:  23%|██▎       | 222/963 [00:30<02:09,  5.71it/s]Loading weights:  24%|██▎       | 228/963 [00:31<01:11, 10.28it/s]Loading weights:  24%|██▍       | 232/963 [00:31<01:05, 11.13it/s]Loading weights:  24%|██▍       | 234/963 [00:31<01:34,  7.70it/s]Loading weights:  25%|██▍       | 240/963 [00:32<01:13,  9.85it/s]Loading weights:  25%|██▌       | 244/963 [00:32<01:07, 10.71it/s]Loading weights:  26%|██▌       | 246/963 [00:33<01:40,  7.13it/s]Loading weights:  26%|██▌       | 252/963 [00:33<01:07, 10.55it/s]Loading weights:  27%|██▋       | 256/963 [00:34<01:26,  8.13it/s]Loading weights:  27%|██▋       | 258/963 [00:34<01:42,  6.85it/s]Loading weights:  27%|██▋       | 262/963 [00:35<01:19,  8.80it/s]Loading weights:  27%|██▋       | 264/963 [00:35<01:12,  9.70it/s]Loading weights:  28%|██▊       | 268/963 [00:35<01:16,  9.14it/s]Loading weights:  28%|██▊       | 270/963 [00:36<01:40,  6.87it/s]Loading weights:  29%|██▊       | 276/963 [00:36<01:01, 11.20it/s]Loading weights:  29%|██▉       | 280/963 [00:37<01:28,  7.70it/s]Loading weights:  29%|██▉       | 282/963 [00:37<01:52,  6.05it/s]Loading weights:  30%|███       | 292/963 [00:38<00:59, 11.21it/s]Loading weights:  31%|███       | 294/963 [00:38<01:17,  8.61it/s]Loading weights:  31%|███       | 298/963 [00:38<01:02, 10.67it/s]Loading weights:  32%|███▏      | 304/963 [00:39<01:21,  8.13it/s]Loading weights:  32%|███▏      | 306/963 [00:40<01:34,  6.92it/s]Loading weights:  32%|███▏      | 310/963 [00:40<01:10,  9.23it/s]Loading weights:  33%|███▎      | 316/963 [00:40<00:55, 11.58it/s]Loading weights:  33%|███▎      | 318/963 [00:41<01:26,  7.49it/s]Loading weights:  34%|███▎      | 324/963 [00:41<00:58, 10.88it/s]Loading weights:  34%|███▍      | 328/963 [00:42<01:06,  9.54it/s]Loading weights:  34%|███▍      | 330/963 [00:42<01:14,  8.45it/s]Loading weights:  35%|███▍      | 334/963 [00:42<00:55, 11.27it/s]Loading weights:  35%|███▌      | 340/963 [00:43<00:42, 14.59it/s]Loading weights:  36%|███▌      | 343/963 [00:43<00:54, 11.32it/s]Loading weights:  36%|███▌      | 346/963 [00:43<00:48, 12.63it/s]Loading weights:  37%|███▋      | 352/963 [00:44<00:42, 14.41it/s]Loading weights:  37%|███▋      | 354/963 [00:44<01:11,  8.49it/s]Loading weights:  38%|███▊      | 364/963 [00:45<01:09,  8.64it/s]Loading weights:  38%|███▊      | 366/963 [00:46<01:20,  7.41it/s]Loading weights:  38%|███▊      | 370/963 [00:46<01:03,  9.28it/s]Loading weights:  39%|███▉      | 374/963 [00:46<00:50, 11.73it/s]Loading weights:  39%|███▉      | 377/963 [00:47<01:04,  9.11it/s]Loading weights:  39%|███▉      | 379/963 [00:47<01:19,  7.37it/s]Loading weights:  40%|███▉      | 384/963 [00:47<00:55, 10.46it/s]Loading weights:  40%|████      | 388/963 [00:48<01:08,  8.39it/s]Loading weights:  40%|████      | 390/963 [00:49<01:40,  5.69it/s]Loading weights:  41%|████      | 396/963 [00:49<01:01,  9.29it/s]Loading weights:  42%|████▏     | 400/963 [00:49<00:53, 10.45it/s]Loading weights:  42%|████▏     | 403/963 [00:50<01:06,  8.42it/s]Loading weights:  42%|████▏     | 408/963 [00:50<00:49, 11.17it/s]Loading weights:  43%|████▎     | 412/963 [00:51<01:08,  8.08it/s]Loading weights:  43%|████▎     | 414/963 [00:52<01:33,  5.86it/s]Loading weights:  44%|████▎     | 420/963 [00:52<00:57,  9.39it/s]Loading weights:  44%|████▍     | 424/963 [00:52<00:51, 10.52it/s]Loading weights:  44%|████▍     | 427/963 [00:53<01:03,  8.44it/s]Loading weights:  45%|████▍     | 430/963 [00:53<00:53, 10.02it/s]Loading weights:  45%|████▌     | 436/963 [00:54<01:24,  6.20it/s]Loading weights:  45%|████▌     | 438/963 [00:55<01:33,  5.62it/s]Loading weights:  46%|████▌     | 444/963 [00:55<01:00,  8.55it/s]Loading weights:  47%|████▋     | 448/963 [00:55<00:52,  9.74it/s]Loading weights:  47%|████▋     | 450/963 [00:56<01:09,  7.43it/s]Loading weights:  47%|████▋     | 454/963 [00:56<00:53,  9.53it/s]Loading weights:  48%|████▊     | 460/963 [00:57<00:55,  9.14it/s]Loading weights:  48%|████▊     | 462/963 [00:57<01:14,  6.70it/s]Loading weights:  48%|████▊     | 466/963 [00:58<00:54,  9.07it/s]Loading weights:  49%|████▉     | 472/963 [00:58<00:56,  8.65it/s]Loading weights:  49%|████▉     | 474/963 [00:59<01:07,  7.22it/s]Loading weights:  50%|████▉     | 478/963 [00:59<00:50,  9.65it/s]Loading weights:  50%|█████     | 484/963 [00:59<00:37, 12.75it/s]Loading weights:  51%|█████     | 487/963 [01:00<00:59,  7.96it/s]Loading weights:  51%|█████     | 490/963 [01:00<00:49,  9.50it/s]Loading weights:  52%|█████▏    | 496/963 [01:01<00:54,  8.52it/s]Loading weights:  52%|█████▏    | 498/963 [01:01<01:00,  7.72it/s]Loading weights:  53%|█████▎    | 506/963 [01:01<00:33, 13.64it/s]Loading weights:  53%|█████▎    | 510/963 [01:02<00:42, 10.64it/s]Loading weights:  54%|█████▎    | 516/963 [01:02<00:29, 14.92it/s]Loading weights:  54%|█████▍    | 520/963 [01:03<00:50,  8.77it/s]Loading weights:  54%|█████▍    | 523/963 [01:04<00:56,  7.81it/s]Loading weights:  55%|█████▌    | 530/963 [01:04<00:35, 12.33it/s]Loading weights:  55%|█████▌    | 534/963 [01:05<00:47,  9.11it/s]Loading weights:  56%|█████▌    | 540/963 [01:05<00:33, 12.53it/s]Loading weights:  56%|█████▋    | 544/963 [01:07<01:10,  5.96it/s]Loading weights:  57%|█████▋    | 547/963 [01:07<01:13,  5.68it/s]Loading weights:  57%|█████▋    | 552/963 [01:07<00:52,  7.89it/s]Loading weights:  58%|█████▊    | 556/963 [01:08<00:44,  9.18it/s]Loading weights:  58%|█████▊    | 559/963 [01:08<00:49,  8.22it/s]Loading weights:  58%|█████▊    | 562/963 [01:09<00:54,  7.34it/s]Loading weights:  59%|█████▉    | 568/963 [01:09<00:42,  9.37it/s]Loading weights:  59%|█████▉    | 570/963 [01:10<00:55,  7.13it/s]Loading weights:  60%|█████▉    | 576/963 [01:10<00:35, 11.00it/s]Loading weights:  60%|██████    | 580/963 [01:10<00:40,  9.57it/s]Loading weights:  60%|██████    | 582/963 [01:11<01:11,  5.36it/s]Loading weights:  61%|██████    | 586/963 [01:12<00:52,  7.16it/s]Loading weights:  61%|██████▏   | 592/963 [01:12<00:41,  8.90it/s]Loading weights:  62%|██████▏   | 594/963 [01:13<00:53,  6.94it/s]Loading weights:  62%|██████▏   | 600/963 [01:13<00:34, 10.38it/s]Loading weights:  63%|██████▎   | 604/963 [01:14<00:42,  8.55it/s]Loading weights:  63%|██████▎   | 606/963 [01:14<00:52,  6.81it/s]Loading weights:  64%|██████▎   | 612/963 [01:14<00:32, 10.64it/s]Loading weights:  64%|██████▍   | 616/963 [01:15<00:34, 10.12it/s]Loading weights:  64%|██████▍   | 618/963 [01:16<00:57,  5.96it/s]Loading weights:  65%|██████▍   | 624/963 [01:16<00:36,  9.18it/s]Loading weights:  65%|██████▌   | 628/963 [01:16<00:37,  8.83it/s]Loading weights:  65%|██████▌   | 630/963 [01:17<00:47,  7.07it/s]Loading weights:  66%|██████▌   | 636/963 [01:17<00:29, 10.94it/s]Loading weights:  66%|██████▋   | 640/963 [01:17<00:26, 12.22it/s]Loading weights:  67%|██████▋   | 643/963 [01:18<00:33,  9.60it/s]Loading weights:  67%|██████▋   | 648/963 [01:18<00:24, 12.89it/s]Loading weights:  68%|██████▊   | 652/963 [01:18<00:27, 11.20it/s]Loading weights:  68%|██████▊   | 654/963 [01:19<00:41,  7.37it/s]Loading weights:  68%|██████▊   | 658/963 [01:19<00:30,  9.99it/s]Loading weights:  69%|██████▉   | 664/963 [01:20<00:23, 12.87it/s]Loading weights:  69%|██████▉   | 667/963 [01:21<00:41,  7.21it/s]Loading weights:  70%|██████▉   | 672/963 [01:21<00:29,  9.83it/s]Loading weights:  70%|███████   | 676/963 [01:21<00:26, 10.73it/s]Loading weights:  70%|███████   | 678/963 [01:22<00:35,  8.14it/s]Loading weights:  71%|███████   | 686/963 [01:22<00:19, 14.53it/s]Loading weights:  72%|███████▏  | 690/963 [01:23<00:37,  7.19it/s]Loading weights:  72%|███████▏  | 696/963 [01:23<00:26, 10.06it/s]Loading weights:  73%|███████▎  | 700/963 [01:24<00:25, 10.50it/s]Loading weights:  73%|███████▎  | 703/963 [01:24<00:35,  7.33it/s]Loading weights:  73%|███████▎  | 706/963 [01:24<00:28,  8.88it/s]Loading weights:  74%|███████▍  | 712/963 [01:25<00:30,  8.14it/s]Loading weights:  74%|███████▍  | 714/963 [01:26<00:46,  5.32it/s]Loading weights:  75%|███████▍  | 718/963 [01:26<00:33,  7.29it/s]Loading weights:  75%|███████▍  | 722/963 [01:27<00:24,  9.76it/s]Loading weights:  75%|███████▌  | 725/963 [01:27<00:30,  7.89it/s]Loading weights:  75%|███████▌  | 727/963 [01:27<00:31,  7.58it/s]Loading weights:  76%|███████▌  | 730/963 [01:28<00:24,  9.68it/s]Loading weights:  76%|███████▋  | 736/963 [01:28<00:25,  9.01it/s]Loading weights:  77%|███████▋  | 738/963 [01:29<00:38,  5.79it/s]Loading weights:  77%|███████▋  | 742/963 [01:29<00:27,  8.13it/s]Loading weights:  77%|███████▋  | 745/963 [01:29<00:21,  9.99it/s]Loading weights:  78%|███████▊  | 748/963 [01:30<00:21, 10.14it/s]Loading weights:  78%|███████▊  | 750/963 [01:31<00:39,  5.41it/s]Loading weights:  78%|███████▊  | 754/963 [01:31<00:26,  7.96it/s]Loading weights:  79%|███████▉  | 760/963 [01:31<00:22,  9.08it/s]Loading weights:  79%|███████▉  | 762/963 [01:32<00:33,  6.06it/s]Loading weights:  80%|███████▉  | 768/963 [01:32<00:20,  9.35it/s]Loading weights:  80%|████████  | 772/963 [01:33<00:18, 10.10it/s]Loading weights:  80%|████████  | 774/963 [01:34<00:31,  6.05it/s]Loading weights:  81%|████████  | 780/963 [01:34<00:19,  9.24it/s]Loading weights:  81%|████████▏ | 784/963 [01:34<00:17,  9.97it/s]Loading weights:  82%|████████▏ | 786/963 [01:35<00:29,  6.02it/s]Loading weights:  82%|████████▏ | 792/963 [01:35<00:17,  9.57it/s]Loading weights:  83%|████████▎ | 796/963 [01:36<00:19,  8.51it/s]Loading weights:  83%|████████▎ | 798/963 [01:37<00:24,  6.62it/s]Loading weights:  83%|████████▎ | 802/963 [01:37<00:18,  8.59it/s]Loading weights:  84%|████████▍ | 808/963 [01:37<00:12, 12.38it/s]Loading weights:  84%|████████▍ | 811/963 [01:37<00:12, 12.07it/s]Loading weights:  85%|████████▌ | 820/963 [01:38<00:13, 10.63it/s]Loading weights:  85%|████████▌ | 822/963 [01:39<00:17,  8.02it/s]Loading weights:  86%|████████▌ | 828/963 [01:39<00:11, 11.26it/s]Loading weights:  86%|████████▋ | 832/963 [01:39<00:11, 11.57it/s]Loading weights:  87%|████████▋ | 834/963 [01:40<00:19,  6.70it/s]Loading weights:  87%|████████▋ | 840/963 [01:40<00:12,  9.87it/s]Loading weights:  88%|████████▊ | 844/963 [01:42<00:18,  6.57it/s]Loading weights:  88%|████████▊ | 846/963 [01:43<00:24,  4.74it/s]Loading weights:  89%|████████▉ | 856/963 [01:43<00:12,  8.36it/s]Loading weights:  89%|████████▉ | 858/963 [01:44<00:16,  6.40it/s]Loading weights:  90%|████████▉ | 862/963 [01:44<00:12,  8.33it/s]Loading weights:  90%|████████▉ | 866/963 [01:44<00:09, 10.70it/s]Loading weights:  90%|█████████ | 869/963 [01:46<00:20,  4.61it/s]Loading weights:  90%|█████████ | 871/963 [01:46<00:19,  4.80it/s]Loading weights:  91%|█████████ | 874/963 [01:46<00:14,  6.22it/s]Loading weights:  91%|█████████ | 876/963 [01:46<00:12,  7.21it/s]Loading weights:  91%|█████████▏| 880/963 [01:47<00:09,  8.36it/s]Loading weights:  92%|█████████▏| 882/963 [01:48<00:18,  4.45it/s]Loading weights:  92%|█████████▏| 886/963 [01:48<00:12,  6.31it/s]Loading weights:  93%|█████████▎| 892/963 [01:49<00:08,  8.55it/s]Loading weights:  93%|█████████▎| 894/963 [01:49<00:10,  6.44it/s]Loading weights:  93%|█████████▎| 900/963 [01:49<00:06,  9.90it/s]Loading weights:  94%|█████████▍| 904/963 [01:50<00:07,  8.36it/s]Loading weights:  94%|█████████▍| 906/963 [01:51<00:08,  6.60it/s]Loading weights:  95%|█████████▍| 912/963 [01:51<00:05, 10.13it/s]Loading weights:  95%|█████████▌| 916/963 [01:51<00:04, 11.15it/s]Loading weights:  95%|█████████▌| 918/963 [01:51<00:04, 10.26it/s]Loading weights:  96%|█████████▋| 928/963 [01:52<00:03, 10.75it/s]Loading weights:  97%|█████████▋| 930/963 [01:53<00:04,  7.69it/s]Loading weights:  98%|█████████▊| 940/963 [01:53<00:01, 11.58it/s]Loading weights:  98%|█████████▊| 942/963 [01:55<00:02,  7.02it/s]Loading weights:  98%|█████████▊| 948/963 [01:55<00:01,  9.52it/s]Loading weights:  99%|█████████▉| 952/963 [01:55<00:00, 11.21it/s]Loading weights:  99%|█████████▉| 954/963 [01:55<00:00,  9.34it/s]Loading weights: 100%|█████████▉| 960/963 [01:55<00:00, 12.96it/s]Loading weights: 100%|██████████| 963/963 [01:56<00:00,  8.30it/s]
+Model loaded.
+
+[1/3] === Processing ACDC (4 clusters, file_level=True) ===
+  [1/4] Cluster org.apache.tika.mime.ss (2 files) — leaf pass...
+/pc2/users/b/bsaranha/.local/lib/python3.10/site-packages/bitsandbytes/backends/cuda/ops.py:468: FutureWarning: _check_is_size will be removed in a future PyTorch release along with guard_size_oblivious.     Use _check(i >= 0) instead.
+  torch._check_is_size(blocksize)
+    [leaf 1/2] MagicDetector
+    [leaf 2/2] MagicMatch
+  [1/4] Cluster org.apache.tika.mime.ss — branch pass...
+  [1/4] Done in 88s
+  [2/4] Cluster org.apache.tika.detect.ss (33 files) — leaf pass...
+    [leaf 1/33] ServiceLoader
+    [leaf 2/33] AutoDetectReader
+    [leaf 3/33] BOMDetector
+    [leaf 4/33] CharsetSupersets
+    [leaf 5/33] CompositeDetector
+    [leaf 6/33] CompositeEncodingDetector
+    [leaf 7/33] DefaultDetector
+    [leaf 8/33] DefaultEncodingDetector
+    [leaf 9/33] DefaultProbDetector
+    [leaf 10/33] DetectHelper
+    [leaf 11/33] Detector
+    [leaf 12/33] EncodingDetector
+    [leaf 13/33] EncodingDetectorContext
+    [leaf 14/33] EncodingResult
+    [leaf 15/33] MetaEncodingDetector
+    [leaf 16/33] MetadataCharsetDetector
+    [leaf 17/33] NNExampleModelDetector
+    [leaf 18/33] NNTrainedModel
+    [leaf 19/33] NNTrainedModelBuilder
+    [leaf 20/33] NameDetector
+    [leaf 21/33] OverrideDetector
+    [leaf 22/33] OverrideEncodingDetector
+    [leaf 23/33] TextDetector
+    [leaf 24/33] TextStatistics
+    [leaf 25/33] TrainedModel
+    [leaf 26/33] TrainedModelDetector
+    [leaf 27/33] XmlRootExtractor
+    [leaf 28/33] BoundedInputStream
+    [leaf 29/33] Property
+    [leaf 30/33] TikaCoreProperties
+    [leaf 31/33] MimeTypes
+    [leaf 32/33] ProbabilisticMimeDetectionSelector
+    [leaf 33/33] StringUtils
+  [2/4] Cluster org.apache.tika.detect.ss — branch pass...
+  [2/4] Done in 1074s
+  [3/4] Cluster org.apache.tika.parser.external.ss (13 files) — leaf pass...
+    [leaf 1/13] ConfigDeserializer
+    [leaf 2/13] TikaComponent
+    [leaf 3/13] TikaProgressTracker
+    [leaf 4/13] TimeoutLimits
+    [leaf 5/13] FileCommandDetector
+    [leaf 6/13] TemporaryResources
+    [leaf 7/13] ExternalProcess
+    [leaf 8/13] ExternalParser
+    [leaf 9/13] ExternalParserConfig
+    [leaf 10/13] BodyContentHandler
+    [leaf 11/13] XHTMLContentHandler
+    [leaf 12/13] FileProcessResult
+    [leaf 13/13] ProcessUtils
+  [3/4] Cluster org.apache.tika.parser.external.ss — branch pass...
+  [3/4] Done in 416s
+  [4/4] Cluster org.apache.tika.parser.ss (89 files) — leaf pass...
+    [leaf 1/89] Tika
+    [leaf 2/89] EmbeddedLimits
+    [leaf 3/89] JsonConfig
+    [leaf 4/89] OutputLimits
+    [leaf 5/89] ParseContextConfig
+    [leaf 6/89] SelfConfiguring
+    [leaf 7/89] TikaActivator
+    [leaf 8/89] EmptyDetector
+    [leaf 9/89] TypeDetector
+    [leaf 10/89] ZeroSizeFileDetector
+    [leaf 11/89] CompositeDigester
+    [leaf 12/89] DigestHelper
+    [leaf 13/89] Digester
+    [leaf 14/89] InputStreamDigester
+    [leaf 15/89] SkipContainerDocumentDigest
+    [leaf 16/89] Embedder
+    [leaf 17/89] ExternalEmbedder
+    [leaf 18/89] CorruptedFileException
+    [leaf 19/89] EncryptedDocumentException
+    [leaf 20/89] TikaException
+    [leaf 21/89] WriteLimitReachedException
+    [leaf 22/89] ZeroByteFileException
+    [leaf 23/89] ContainerExtractor
+    [leaf 24/89] EmbeddedDocumentExtractor
+    [leaf 25/89] EmbeddedDocumentExtractorFactory
+    [leaf 26/89] EmbeddedDocumentUtil
+    [leaf 27/89] EmbeddedResourceHandler
+    [leaf 28/89] ParentContentHandler
+    [leaf 29/89] ParserContainerExtractor
+    [leaf 30/89] ParsingEmbeddedDocumentExtractor
+    [leaf 31/89] StandardExtractorFactory
+    [leaf 32/89] FilenameUtils
+    [leaf 33/89] TikaInputStream
+    [leaf 34/89] LanguageDetector
+    [leaf 35/89] Metadata
+    [leaf 36/89] CompositeMetadataFilter
+    [leaf 37/89] MetadataFilter
+    [leaf 38/89] MetadataFilterBase
+    [leaf 39/89] NoOpFilter
+    [leaf 40/89] RemoveByMimeMetadataFilter
+    [leaf 41/89] MediaType
+    [leaf 42/89] MediaTypeRegistry
+    [leaf 43/89] AbstractEncodingDetectorParser
+    [leaf 44/89] AbstractExternalProcessParser
+    [leaf 45/89] AbstractParser
+    [leaf 46/89] AutoDetectParser
+    [leaf 47/89] AutoDetectParserConfig
+    [leaf 48/89] CompositeParser
+    [leaf 49/89] CryptoParser
+    [leaf 50/89] DefaultParser
+    [leaf 51/89] DelegatingParser
+    [leaf 52/89] EmptyParser
+    [leaf 53/89] ErrorParser
+    [leaf 54/89] NetworkParser
+    [leaf 55/89] ParseContext
+    [leaf 56/89] ParseRecord
+    [leaf 57/89] Parser
+    [leaf 58/89] ParserDecorator
+    [leaf 59/89] ParserPostProcessor
+    [leaf 60/89] ParsingIntent
+    [leaf 61/89] ParsingReader
+    [leaf 62/89] PasswordProvider
+    [leaf 63/89] RecursiveParserWrapper
+    [leaf 64/89] RegexCaptureParser
+    [leaf 65/89] RegexCaptureParserConfig
+    [leaf 66/89] RenderingParser
+    [leaf 67/89] SimplePasswordProvider
+    [leaf 68/89] StatefulParser
+    [leaf 69/89] AbstractMultipleParser
+    [leaf 70/89] FallbackParser
+    [leaf 71/89] SupplementingParser
+    [leaf 72/89] CompositeRenderer
+    [leaf 73/89] Renderer
+    [leaf 74/89] AbstractRecursiveParserWrapperHandler
+    [leaf 75/89] BasicContentHandlerFactory
+    [leaf 76/89] ContentHandlerDecoratorFactory
+    [leaf 77/89] ContentHandlerFactory
+    [leaf 78/89] RecursiveParserWrapperHandler
+    [leaf 79/89] SecureContentHandler
+    [leaf 80/89] TaggedContentHandler
+    [leaf 81/89] TeeContentHandler
+    [leaf 82/89] WriteLimiter
+    [leaf 83/89] WriteOutContentHandler
+    [leaf 84/89] ConcurrentUtils
+    [leaf 85/89] ExceptionUtils
+    [leaf 86/89] ParserUtils
+    [leaf 87/89] RegexUtils
+    [leaf 88/89] ServiceLoaderUtils
+    [leaf 89/89] XMLReaderUtils
+  [4/4] Cluster org.apache.tika.parser.ss — branch pass...
+  [4/4] Done in 2642s
+  CSV saved: /scratch/hpc-prf-dssecs/bsaranha/Slurm4/acdc_clusters.csv
+
+[2/3] === Processing ARC (5 clusters, file_level=False) ===
+  [1/5] Cluster cluster_0 (129 files) — leaf pass...
+    [leaf 1/129] Tika
+    [leaf 2/129] ConfigDeserializer
+    [leaf 3/129] EmbeddedLimits
+    [leaf 4/129] JsonConfig
+    [leaf 5/129] OutputLimits
+    [leaf 6/129] ParseContextConfig
+    [leaf 7/129] SelfConfiguring
+    [leaf 8/129] ServiceLoader
+    [leaf 9/129] TikaActivator
+    [leaf 10/129] TikaProgressTracker
+    [leaf 11/129] TimeoutLimits
+    [leaf 12/129] AutoDetectReader
+    [leaf 13/129] BOMDetector
+    [leaf 14/129] CompositeDetector
+    [leaf 15/129] CompositeEncodingDetector
+    [leaf 16/129] DefaultDetector
+    [leaf 17/129] DefaultEncodingDetector
+    [leaf 18/129] DefaultProbDetector
+    [leaf 19/129] Detector
+    [leaf 20/129] EmptyDetector
+    [leaf 21/129] EncodingDetector
+    [leaf 22/129] FileCommandDetector
+    [leaf 23/129] MagicDetector
+    [leaf 24/129] MetaEncodingDetector
+    [leaf 25/129] MetadataCharsetDetector
+    [leaf 26/129] NameDetector
+    [leaf 27/129] OverrideDetector
+    [leaf 28/129] OverrideEncodingDetector
+    [leaf 29/129] OverrideEncodingDetector$Config
+    [leaf 30/129] TextDetector
+    [leaf 31/129] TrainedModel
+    [leaf 32/129] TrainedModelDetector
+    [leaf 33/129] TypeDetector
+    [leaf 34/129] XmlRootExtractor
+    [leaf 35/129] XmlRootExtractor$ExtractorHandler
+    [leaf 36/129] XmlRootExtractor$MalformedCharException
+    [leaf 37/129] ZeroSizeFileDetector
+    [leaf 38/129] CompositeDigester
+    [leaf 39/129] DigestHelper
+    [leaf 40/129] Digester
+    [leaf 41/129] InputStreamDigester
+    [leaf 42/129] SkipContainerDocumentDigest
+    [leaf 43/129] Embedder
+    [leaf 44/129] ExternalEmbedder
+    [leaf 45/129] CorruptedFileException
+    [leaf 46/129] EncryptedDocumentException
+    [leaf 47/129] TikaException
+    [leaf 48/129] ZeroByteFileException
+    [leaf 49/129] ZeroByteFileException$IgnoreZeroByteFileException
+    [leaf 50/129] ContainerExtractor
+    [leaf 51/129] EmbeddedDocumentExtractor
+    [leaf 52/129] EmbeddedDocumentExtractorFactory
+    [leaf 53/129] EmbeddedDocumentUtil
+    [leaf 54/129] EmbeddedDocumentUtil$EmbeddedResourcePrefix
+    [leaf 55/129] EmbeddedResourceHandler
+    [leaf 56/129] ParentContentHandler
+    [leaf 57/129] ParserContainerExtractor
+    [leaf 58/129] ParserContainerExtractor$RecursiveParser
+    [leaf 59/129] ParsingEmbeddedDocumentExtractor
+    [leaf 60/129] StandardExtractorFactory
+    [leaf 61/129] LanguageDetector
+    [leaf 62/129] CompositeMetadataFilter
+    [leaf 63/129] MetadataFilter
+    [leaf 64/129] MetadataFilterBase
+    [leaf 65/129] NoOpFilter
+    [leaf 66/129] RemoveByMimeMetadataFilter
+    [leaf 67/129] MagicMatch
+    [leaf 68/129] MimeTypes
+    [leaf 69/129] ProbabilisticMimeDetectionSelector
+    [leaf 70/129] AbstractEncodingDetectorParser
+    [leaf 71/129] AbstractExternalProcessParser
+    [leaf 72/129] AbstractParser
+    [leaf 73/129] AutoDetectParser
+    [leaf 74/129] AutoDetectParserConfig
+    [leaf 75/129] AutoDetectParserConfig$1
+    [leaf 76/129] CompositeParser
+    [leaf 77/129] CryptoParser
+    [leaf 78/129] DefaultParser
+    [leaf 79/129] DelegatingParser
+    [leaf 80/129] EmptyParser
+    [leaf 81/129] ErrorParser
+    [leaf 82/129] NetworkParser
+    [leaf 83/129] NetworkParser$1
+    [leaf 84/129] NetworkParser$MetaHandler
+    [leaf 85/129] NetworkParser$ParsingTask
+    [leaf 86/129] ParseContext$StringJsonConfig
+    [leaf 87/129] ParseRecord
+    [leaf 88/129] Parser
+    [leaf 89/129] ParserDecorator
+    [leaf 90/129] ParserDecorator$MimeFilteringDecorator
+    [leaf 91/129] ParserPostProcessor
+    [leaf 92/129] ParsingIntent
+    [leaf 93/129] ParsingReader
+    [leaf 94/129] ParsingReader$ParsingTask
+    [leaf 95/129] PasswordProvider
+    [leaf 96/129] RecursiveParserWrapper
+    [leaf 97/129] RecursiveParserWrapper$EmbeddedParserDecorator
+    [leaf 98/129] RecursiveParserWrapper$ParserState
+    [leaf 99/129] RecursiveParserWrapper$RecursivelySecureContentHandler
+    [leaf 100/129] RecursiveParserWrapper$SecureHandlerCounter
+    [leaf 101/129] RegexCaptureParser
+    [leaf 102/129] RegexCaptureParserConfig
+    [leaf 103/129] RenderingParser
+    [leaf 104/129] SimplePasswordProvider
+    [leaf 105/129] StatefulParser
+    [leaf 106/129] ExternalParser
+    [leaf 107/129] ExternalParserConfig
+    [leaf 108/129] AbstractMultipleParser
+    [leaf 109/129] AbstractMultipleParser$MetadataPolicy
+    [leaf 110/129] FallbackParser
+    [leaf 111/129] SupplementingParser
+    [leaf 112/129] CompositeRenderer
+    [leaf 113/129] Renderer
+    [leaf 114/129] AbstractRecursiveParserWrapperHandler
+    [leaf 115/129] BasicContentHandlerFactory
+    [leaf 116/129] BodyContentHandler
+    [leaf 117/129] ContentHandlerDecoratorFactory
+    [leaf 118/129] ContentHandlerFactory
+    [leaf 119/129] RecursiveParserWrapperHandler
+    [leaf 120/129] SecureContentHandler
+    [leaf 121/129] TaggedContentHandler
+    [leaf 122/129] TeeContentHandler
+    [leaf 123/129] WriteLimiter
+    [leaf 124/129] WriteOutContentHandler
+    [leaf 125/129] XHTMLContentHandler
+    [leaf 126/129] ConcurrentUtils
+    [leaf 127/129] RegexUtils
+    [leaf 128/129] ServiceLoaderUtils
+    [leaf 129/129] XMLReaderUtils
+  [1/5] Cluster cluster_0 — branch pass...
+  [1/5] Done in 3739s
+  [2/5] Cluster cluster_1 (9 files) — leaf pass...
+    [leaf 1/9] CharsetSupersets
+    [leaf 2/9] EncodingDetectorContext
+    [leaf 3/9] EncodingDetectorContext$Result
+    [leaf 4/9] EncodingResult
+    [leaf 5/9] EncodingResult$ResultType
+    [leaf 6/9] NNExampleModelDetector
+    [leaf 7/9] NNTrainedModel
+    [leaf 8/9] NNTrainedModelBuilder
+    [leaf 9/9] TextStatistics
+  [2/5] Cluster cluster_1 — branch pass...
+  [2/5] Done in 295s
+  [3/5] Cluster cluster_2 (7 files) — leaf pass...
+    [leaf 1/7] DetectHelper
+    [leaf 2/7] WriteLimitReachedException
+    [leaf 3/7] BoundedInputStream
+    [leaf 4/7] FilenameUtils
+    [leaf 5/7] ExceptionUtils
+    [leaf 6/7] ParserUtils
+    [leaf 7/7] StringUtils
+  [3/5] Cluster cluster_2 — branch pass...
+  [3/5] Done in 254s
+  [4/5] Cluster cluster_4 (4 files) — leaf pass...
+    [leaf 1/4] TemporaryResources
+    [leaf 2/4] ExternalProcess
+    [leaf 3/4] FileProcessResult
+    [leaf 4/4] ProcessUtils
+  [4/5] Cluster cluster_4 — branch pass...
+  [4/5] Done in 142s
+  [5/5] Cluster cluster_3 (7 files) — leaf pass...
+    [leaf 1/7] TikaInputStream
+    [leaf 2/7] Metadata
+    [leaf 3/7] Property
+    [leaf 4/7] TikaCoreProperties
+    [leaf 5/7] MediaType
+    [leaf 6/7] MediaTypeRegistry
+    [leaf 7/7] ParseContext
+  [5/5] Cluster cluster_3 — branch pass...
+  [5/5] Done in 234s
+  CSV saved: /scratch/hpc-prf-dssecs/bsaranha/Slurm4/arc_clusters.csv
+
+[3/3] === Processing Limbo (10 clusters, file_level=True) ===
+  [1/10] Cluster 0 (11 files) — leaf pass...
+    [leaf 1/11] Tika
+    [leaf 2/11] ServiceLoader
+    [leaf 3/11] TikaActivator
+    [leaf 4/11] DefaultEncodingDetector
+    [leaf 5/11] MetaEncodingDetector
+    [leaf 6/11] EmbeddedDocumentUtil
+    [leaf 7/11] ParserContainerExtractor
+    [leaf 8/11] MimeTypes
+    [leaf 9/11] ProbabilisticMimeDetectionSelector
+    [leaf 10/11] AbstractExternalProcessParser
+    [leaf 11/11] ExternalParserConfig
+  [1/10] Cluster 0 — branch pass...
+  [1/10] Done in 365s
+  [2/10] Cluster 1 (37 files) — leaf pass...
+    [leaf 1/37] ConfigDeserializer
+    [leaf 2/37] JsonConfig
+    [leaf 3/37] SelfConfiguring
+    [leaf 4/37] TikaComponent
+    [leaf 5/37] CharsetSupersets
+    [leaf 6/37] TextStatistics
+    [leaf 7/37] TrainedModel
+    [leaf 8/37] CorruptedFileException
+    [leaf 9/37] EncryptedDocumentException
+    [leaf 10/37] TikaException
+    [leaf 11/37] WriteLimitReachedException
+    [leaf 12/37] ZeroByteFileException
+    [leaf 13/37] EmbeddedDocumentUtil
+    [leaf 14/37] ParentContentHandler
+    [leaf 15/37] BoundedInputStream
+    [leaf 16/37] FilenameUtils
+    [leaf 17/37] TemporaryResources
+    [leaf 18/37] TikaInputStream
+    [leaf 19/37] ExternalProcess
+    [leaf 20/37] Property
+    [leaf 21/37] TikaCoreProperties
+    [leaf 22/37] MediaType
+    [leaf 23/37] MediaTypeRegistry
+    [leaf 24/37] ParsingIntent
+    [leaf 25/37] RegexCaptureParserConfig
+    [leaf 26/37] AbstractRecursiveParserWrapperHandler
+    [leaf 27/37] BodyContentHandler
+    [leaf 28/37] ContentHandlerFactory
+    [leaf 29/37] TaggedContentHandler
+    [leaf 30/37] TeeContentHandler
+    [leaf 31/37] WriteLimiter
+    [leaf 32/37] ExceptionUtils
+    [leaf 33/37] FileProcessResult
+    [leaf 34/37] ProcessUtils
+    [leaf 35/37] RegexUtils
+    [leaf 36/37] ServiceLoaderUtils
+    [leaf 37/37] StringUtils
+  [2/10] Cluster 1 — branch pass...
+  [2/10] Done in 1078s
+  [3/10] Cluster 2 (32 files) — leaf pass...
+    [leaf 1/32] EmbeddedLimits
+    [leaf 2/32] OutputLimits
+    [leaf 3/32] ParseContextConfig
+    [leaf 4/32] TikaProgressTracker
+    [leaf 5/32] TimeoutLimits
+    [leaf 6/32] CompositeDigester
+    [leaf 7/32] DigestHelper
+    [leaf 8/32] Digester
+    [leaf 9/32] InputStreamDigester
+    [leaf 10/32] SkipContainerDocumentDigest
+    [leaf 11/32] Embedder
+    [leaf 12/32] ExternalEmbedder
+    [leaf 13/32] ContainerExtractor
+    [leaf 14/32] EmbeddedDocumentExtractor
+    [leaf 15/32] EmbeddedDocumentExtractorFactory
+    [leaf 16/32] EmbeddedResourceHandler
+    [leaf 17/32] StandardExtractorFactory
+    [leaf 18/32] LanguageDetector
+    [leaf 19/32] Metadata
+    [leaf 20/32] CompositeMetadataFilter
+    [leaf 21/32] MetadataFilter
+    [leaf 22/32] MetadataFilterBase
+    [leaf 23/32] NoOpFilter
+    [leaf 24/32] RemoveByMimeMetadataFilter
+    [leaf 25/32] CompositeRenderer
+    [leaf 26/32] Renderer
+    [leaf 27/32] BasicContentHandlerFactory
+    [leaf 28/32] ContentHandlerDecoratorFactory
+    [leaf 29/32] SecureContentHandler
+    [leaf 30/32] XHTMLContentHandler
+    [leaf 31/32] ConcurrentUtils
+    [leaf 32/32] XMLReaderUtils
+  [3/10] Cluster 2 — branch pass...
+  [3/10] Done in 980s
+  [4/10] Cluster 3 (36 files) — leaf pass...
+    [leaf 1/36] AutoDetectReader
+    [leaf 2/36] BOMDetector
+    [leaf 3/36] CompositeEncodingDetector
+    [leaf 4/36] DetectHelper
+    [leaf 5/36] Detector
+    [leaf 6/36] EncodingDetector
+    [leaf 7/36] FileCommandDetector
+    [leaf 8/36] MetadataCharsetDetector
+    [leaf 9/36] OverrideEncodingDetector
+    [leaf 10/36] XmlRootExtractor
+    [leaf 11/36] ParsingEmbeddedDocumentExtractor
+    [leaf 12/36] MagicMatch
+    [leaf 13/36] AbstractEncodingDetectorParser
+    [leaf 14/36] AbstractParser
+    [leaf 15/36] AutoDetectParserConfig
+    [leaf 16/36] CryptoParser
+    [leaf 17/36] DefaultParser
+    [leaf 18/36] DelegatingParser
+    [leaf 19/36] EmptyParser
+    [leaf 20/36] ErrorParser
+    [leaf 21/36] NetworkParser
+    [leaf 22/36] ParseContext
+    [leaf 23/36] ParseRecord
+    [leaf 24/36] Parser
+    [leaf 25/36] ParserDecorator
+    [leaf 26/36] ParserPostProcessor
+    [leaf 27/36] ParsingReader
+    [leaf 28/36] PasswordProvider
+    [leaf 29/36] RegexCaptureParser
+    [leaf 30/36] RenderingParser
+    [leaf 31/36] SimplePasswordProvider
+    [leaf 32/36] StatefulParser
+    [leaf 33/36] ExternalParser
+    [leaf 34/36] AbstractMultipleParser
+    [leaf 35/36] WriteOutContentHandler
+    [leaf 36/36] ParserUtils
+  [4/10] Cluster 3 — branch pass...
+  [4/10] Done in 1087s
+  [5/10] Cluster 4 (11 files) — leaf pass...
+    [leaf 1/11] CompositeDetector
+    [leaf 2/11] DefaultDetector
+    [leaf 3/11] DefaultProbDetector
+    [leaf 4/11] EmptyDetector
+    [leaf 5/11] MagicDetector
+    [leaf 6/11] NameDetector
+    [leaf 7/11] OverrideDetector
+    [leaf 8/11] TextDetector
+    [leaf 9/11] TrainedModelDetector
+    [leaf 10/11] TypeDetector
+    [leaf 11/11] ZeroSizeFileDetector
+  [5/10] Cluster 4 — branch pass...
+  [5/10] Done in 355s
+  [6/10] Cluster 5 (2 files) — leaf pass...
+    [leaf 1/2] EncodingDetectorContext
+    [leaf 2/2] EncodingResult
+  [6/10] Cluster 5 — branch pass...
+  [6/10] Done in 94s
+  [7/10] Cluster 6 (3 files) — leaf pass...
+    [leaf 1/3] NNExampleModelDetector
+    [leaf 2/3] NNTrainedModel
+    [leaf 3/3] NNTrainedModelBuilder
+  [7/10] Cluster 6 — branch pass...
+  [7/10] Done in 112s
+  [8/10] Cluster 7 (1 files) — leaf pass...
+    [leaf 1/1] XmlRootExtractor
+  [8/10] Cluster 7 — branch pass...
+  [8/10] Done in 54s
+  [9/10] Cluster 8 (7 files) — leaf pass...
+    [leaf 1/7] AutoDetectParser
+    [leaf 2/7] CompositeParser
+    [leaf 3/7] ParserDecorator
+    [leaf 4/7] RecursiveParserWrapper
+    [leaf 5/7] AbstractMultipleParser
+    [leaf 6/7] FallbackParser
+    [leaf 7/7] SupplementingParser
+  [9/10] Cluster 8 — branch pass...
+  [9/10] Done in 231s
+  [10/10] Cluster 9 (2 files) — leaf pass...
+    [leaf 1/2] RecursiveParserWrapper
+    [leaf 2/2] RecursiveParserWrapperHandler
+  [10/10] Cluster 9 — branch pass...
+  [10/10] Done in 87s
+  CSV saved: /scratch/hpc-prf-dssecs/bsaranha/Slurm4/limbo_clusters.csv
+
+Results saved to /scratch/hpc-prf-dssecs/bsaranha/Slurm4/hcag_final_results.json
+Job finished: Sa 6. Jun 23:33:46 CEST 2026
