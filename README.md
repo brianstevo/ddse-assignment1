@@ -16,8 +16,8 @@ Runs three clustering algorithms on the Tika dependency RSF using the ARCADE too
 | `wca/` | WCA UEMNM output RSF files for k = 5, 10, 20, 30, 40, 50 |
 | `limbo/` | Limbo IL output RSF files for k = 5, 10, 20, 30, 40, 50 |
 | `acdc/` | ACDC default output RSF (4 clusters, pattern-driven) |
+| `run_clustering.py` | Runs WCA, Limbo, ACDC clustering and saves RSF files |
 | `steps.txt` | Commands and stopthreshold explanation |
-| `effort_table.txt` | Time tracking |
 
 **Key note:** WCA produces 1 giant cluster + singletons for k < 50 on this dataset. Limbo k=10 selected as best for Week 4 (highest CVG@30 vs ARC). ACDC auto-detects 4 clusters.
 
@@ -28,7 +28,7 @@ Compares WCA, Limbo, and ACDC clusterings using ARCADE metrics.
 
 | File | Contents |
 |------|----------|
-| `a2a_cvg_comparison.py` | Runs all clusterings and computes A2a + strict CVG for all cross-algorithm pairs |
+| `a2a_cvg_comparison.py` | Reads existing RSF files from week1 and computes A2a + strict CVG for all cross-algorithm pairs |
 | `a2a_cvg_comparison.txt` | Full comparison table (one direction per pair, sorted by A2a descending) |
 | `wca_vs_limbo.py` | Compares WCA UEMNM vs Limbo IL across all k values |
 | `wca_vs_limbo.txt` | WCA vs Limbo comparison table |
