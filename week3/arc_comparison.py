@@ -8,13 +8,15 @@ import subprocess
 from pathlib import Path
 
 BASE      = Path(__file__).parent
-DSSE      = Path("/home/brian/Documents/master_cs/dsse")
-ARCADE_W2 = DSSE / "assignment1/Arcade_Tools_W2"
-A2A_JAR   = ARCADE_W2 / "arcade_core_A2a.jar"
-CVG_JAR   = ARCADE_W2 / "arcade_core_Cvg.jar"
+REPO      = BASE.parent
+TOOLS     = REPO / "tools"
+A2A_JAR   = TOOLS / "arcade_core_A2a.jar"
+CVG_JAR   = TOOLS / "arcade_core_Cvg.jar"
 
 ARC_DIR   = BASE / "collab_output/rsf"
-OTHER_DIR = DSSE / "Assignment1FinalWeek/output"
+WCA_DIR   = REPO / "week1/wca"
+LIMBO_DIR = REPO / "week1/limbo"
+ACDC_DIR  = REPO / "week1/acdc"
 K_VALUES  = [5, 10, 20, 30, 40, 50]
 
 
@@ -42,9 +44,9 @@ def main():
 
     other_files = {}
     for k in K_VALUES:
-        other_files[f"WCA UEMNM {k}"]  = OTHER_DIR / f"WCA_UEMNM_{k}.rsf"
-        other_files[f"Limbo IL {k}"]   = OTHER_DIR / f"Limbo_IL_{k}.rsf"
-    other_files["ACDC default"] = OTHER_DIR / "ACDC_default.rsf"
+        other_files[f"WCA UEMNM {k}"]  = WCA_DIR   / f"WCA_UEMNM_{k}.rsf"
+        other_files[f"Limbo IL {k}"]   = LIMBO_DIR / f"Limbo_IL_{k}.rsf"
+    other_files["ACDC default"] = ACDC_DIR / "ACDC_default.rsf"
 
     rows = []
     for ka, ra in arc_files.items():

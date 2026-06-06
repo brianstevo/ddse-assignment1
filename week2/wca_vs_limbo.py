@@ -9,11 +9,12 @@ from pathlib import Path
 from collections import defaultdict
 
 BASE      = Path(__file__).parent
-DSSE      = Path("/home/brian/Documents/master_cs/dsse")
-ARCADE_W2 = DSSE / "assignment1/Arcade_Tools_W2"
-A2A_JAR   = ARCADE_W2 / "arcade_core_A2a.jar"
-CVG_JAR   = ARCADE_W2 / "arcade_core_Cvg.jar"
-OUT       = DSSE / "Assignment1FinalWeek/output"
+REPO      = BASE.parent
+TOOLS     = REPO / "tools"
+A2A_JAR   = TOOLS / "arcade_core_A2a.jar"
+CVG_JAR   = TOOLS / "arcade_core_Cvg.jar"
+WCA_DIR   = REPO / "week1/wca"
+LIMBO_DIR = REPO / "week1/limbo"
 K_VALUES  = [5, 10, 20, 30, 40, 50]
 
 
@@ -37,8 +38,8 @@ def run_cvg_strict(ra, rb):
 
 
 def main():
-    wca_files   = {k: OUT / f"WCA_UEMNM_{k}.rsf"  for k in K_VALUES}
-    limbo_files = {k: OUT / f"Limbo_IL_{k}.rsf"   for k in K_VALUES}
+    wca_files   = {k: WCA_DIR   / f"WCA_UEMNM_{k}.rsf" for k in K_VALUES}
+    limbo_files = {k: LIMBO_DIR / f"Limbo_IL_{k}.rsf"  for k in K_VALUES}
 
     rows = []
     seen = set()
