@@ -19,8 +19,6 @@ Runs three clustering algorithms on the Tika dependency RSF using the ARCADE too
 | `run_clustering.py` | Runs WCA, Limbo, ACDC clustering and saves RSF files |
 | `steps.txt` | Commands and stopthreshold explanation |
 
-**Key note:** WCA produces 1 giant cluster + singletons for k < 50 on this dataset. Limbo k=10 selected as best for Week 4 (highest CVG@30 vs ARC). ACDC auto-detects 4 clusters.
-
 ---
 
 ### week2 — Comparative Evaluation (A2a + CVG)
